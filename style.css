@@ -4,39 +4,35 @@
 
 html,
 body {
-  font-family: "Roboto Flex", sans-serif;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
   background-color: #1e1e1e;
+
   color: #e6e6e6;
 }
 
 @layer utilities {
-  .roboto-500 {
-    font-style: normal;
-    font-weight: 500;
-    line-height: 125%;
-    font-stretch: 100%;
-    font-optical-sizing: 8;
-    font-variation-settings: "GRAD" -200, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514,
-      "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 8;
+  .gothic-font {
+    font-family: "Dela Gothic One", cursive;
   }
 
-  .roboto-700 {
-    font-style: normal;
-    font-weight: 700;
-    font-stretch: 151%;
-    letter-spacing: 5px;
-    font-optical-sizing: 144;
-    font-variation-settings: "GRAD" -200, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514,
-      "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 144;
+  .fluid-h1 {
+    font-size: clamp(36px, calc(2.25rem + (96 - 36) * ((100vw - 375px) / (1400 - 375))), 96px);
   }
 
-  .roboto-1000 {
-    font-style: normal;
-    font-weight: 1000;
-    line-height: 125%;
-    font-stretch: 100%;
-    font-optical-sizing: 8;
-    font-variation-settings: "GRAD" -200, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514,
-      "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 8;
+  .fluid-h2 {
+    font-size: clamp(24px, calc(1.5rem + (76 - 24) * ((100vw - 375px) / (1400 - 375))), 76px);
+  }
+
+  .fluid-p {
+    font-size: clamp(14px, calc(0.875rem + (20 - 14) * ((100vw - 375px) / (1400 - 375))), 20px);
+  }
+
+  .fluid-nav-item {
+    font-size: clamp(14px, calc(0.875rem + (24 - 14) * ((100vw - 375px) / (1400 - 375))), 24px);
+  }
+
+  .fluid16-12 {
+    font-size: clamp(12px, calc(0.75rem + (16 - 12) * ((100vw - 375px) / (1400 - 375))), 16px);
   }
 }
