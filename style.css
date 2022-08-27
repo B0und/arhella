@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #1e1e1e;
+  color: #e6e6e6;
+}
+
+@layer utilities {
+  .roboto-500 {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    font-stretch: 100%;
+    font-optical-sizing: 8;
+    font-variation-settings: "GRAD" -200, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514,
+      "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 8;
+  }
+
+  .roboto-700 {
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: 151%;
+    letter-spacing: 5px;
+    font-optical-sizing: 144;
+    font-variation-settings: "GRAD" -200, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514,
+      "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 144;
+  }
+
+  .roboto-1000 {
+    font-style: normal;
+    font-weight: 1000;
+    line-height: 125%;
+    font-stretch: 100%;
+    font-optical-sizing: 8;
+    font-variation-settings: "GRAD" -200, "slnt" 0, "XTRA" 468, "XOPQ" 96, "YOPQ" 79, "YTLC" 514,
+      "YTUC" 712, "YTAS" 750, "YTDE" -203, "YTFI" 738, "opsz" 8;
+  }
+}
