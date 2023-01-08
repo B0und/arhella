@@ -1,6 +1,3 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
 export const SITE_TITLE = 'Arhella';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
 
@@ -12,6 +9,8 @@ export const PROJECTS_DATA = [
     text: 'osu! beatmaps mirror for removed maps from official server',
     imageSrc: '/chimu.png',
     color: '#FF6666',
+    buttonColor: '#342121',
+    buttonTextColor: '#B6B1B1',
   },
   {
     id: 'CircleForms',
@@ -20,6 +19,8 @@ export const PROJECTS_DATA = [
     text: 'an alternative to google forms with additional integration with osu! API',
     imageSrc: '/circleforms.png',
     color: '#FF66AA',
+    buttonColor: '#352028',
+    buttonTextColor: '#B7B1B4',
   },
   {
     id: 'The Potencial',
@@ -28,6 +29,8 @@ export const PROJECTS_DATA = [
     text: 'CRM-system for IT companies',
     imageSrc: '/potential.png',
     color: '#FFFFFF',
+    buttonColor: '#343535',
+    buttonTextColor: '#B7B7B7',
   },
   {
     id: 'ESET NOD32 Antivirus',
@@ -36,6 +39,8 @@ export const PROJECTS_DATA = [
     text: 'Redesign of ESET NOD32 Antivirus Windows App',
     imageSrc: '/eset.png',
     color: '#0094A1',
+    buttonColor: '#142627',
+    buttonTextColor: '#AEB3B3',
   },
   {
     id: 'OSIRIS',
@@ -44,6 +49,8 @@ export const PROJECTS_DATA = [
     text: 'CRM-system for a funeral parlour company (test task using design system)',
     imageSrc: '/osiris.png',
     color: '#E0343F',
+    buttonColor: '#2D181A',
+    buttonTextColor: '#B5AFAF',
   },
   {
     id: 'Readmanga.live',
@@ -52,6 +59,8 @@ export const PROJECTS_DATA = [
     text: 'the largest database of manga in runet',
     imageSrc: '/readmanga.png',
     color: '#EDD369',
+    buttonColor: '#302D20',
+    buttonTextColor: '#B6B5B1',
   },
   {
     id: 'Graphic Design',
@@ -60,5 +69,7 @@ export const PROJECTS_DATA = [
     text: 'Some of my works for community tournaments and Yandex Test Task',
     imageSrc: '/graphicdesign.png',
     color: '#FE704B',
+    buttonColor: '#301F1A',
+    buttonTextColor: '#B7B2B0',
   },
 ];
