@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+    url('/fonts/ClashDisplay-Variable.woff') format('woff'), url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+::selection {
+  color: #451a1a;
+  background: #ff6666;
+}
+
+html {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  background-color: #0a0a0a;
+  color: rgba(240, 240, 240, 0.749);
+  letter-spacing: 0.02em;
+}

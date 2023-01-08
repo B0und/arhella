@@ -1,0 +1,80 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  text: string;
+  title: string;
+  imageSrc: string;
+  id: string;
+}
+
+const { href, title, text, imageSrc, id } = Astro.props;
+---
+
+<div class="flex flex-col 2xl:text-2xl">
+  <img src={imageSrc} alt="" class="object-contain" />
+  <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between xl:gap-4">
+    <div>
+      <h2 class="mt-3 font-heading font-medium text-[#F0F0F0]">{title}</h2>
+      <p>{text}</p>
+    </div>
+    <a
+      id={id}
+      target="_blank"
+      href={href}
+      class="mt-3 w-fit rounded-lg bg-[#321F1F] px-3 py-1 transition-colors duration-1000 2xl:rounded-3xl 2xl:px-8 2xl:py-3"
+      >view&nbsp;project</a
+    >
+  </div>
+</div>
+<script>
+  import type { log } from 'astro/dist/core/logger/core';
+  import { PROJECTS_DATA } from '../config';
+
+  // find all lights
+  const lights = document.querySelectorAll<HTMLElement>('.point-light');
+  // console.log(lights);
+
+  const colorButtons: HTMLElement[] = [];
+  // find all buttons that will change color
+  PROJECTS_DATA.map((project) => {
+    const colorButton = document.getElementById(project.id) as HTMLElement;
+    colorButtons.push(colorButton);
+  });
+
+  let options = {
+    rootMargin: '0px',
+    threshold: 1.0,
+  };
+
+  let observer = new IntersectionObserver((entries, observer) => {
+    // console.log(entries, observer);
+    // change lights and buttons color
+
+    const entry = entries[0];
+    // if (entry.intersectionRatio <= 0.75) return;
+
+    const elementId = entries[0].target.id;
+    console.log(entries);
+    console.log(elementId);
+    const newColor = PROJECTS_DATA.filter((project) => project.id === elementId)[0].color;
+    console.log(newColor);
+
+    if (!entry.isIntersecting) return;
+    for (let light of lights) {
+      // console.log(light.);
+      light.style.backgroundColor = newColor!;
+    }
+
+    for (let button of colorButtons) {
+      // console.log(light.);
+      button.style.backgroundColor = newColor!;
+    }
+  }, options);
+
+  // get ids from objects and observe them
+  PROJECTS_DATA.map((project) => {
+    const intersectionElement = document.getElementById(project.id) as HTMLElement;
+
+    console.log(intersectionElement);
+    observer.observe(intersectionElement);
+  });
+</script>
