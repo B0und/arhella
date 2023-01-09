@@ -17,15 +17,15 @@ let today = new Date().toLocaleDateString('en-us', {
   </head>
   <body class="flex flex-col px-9 py-6 md:flex-row md:gap-28 2xl:gap-[170px] 2xl:px-16 2xl:py-10">
     <div
-      class="point-light fixed bottom-0 left-0 -z-10 h-[750px] w-[750px] translate-x-[-50%] rounded-[374px] bg-[#FF6666] opacity-20 blur-[300px] transition-colors duration-1000 md:opacity-10"
+      class="point-light fixed bottom-0 left-0 -z-10 h-[750px] w-[750px] translate-x-[-50%] rounded-[374px] bg-[#FF6666] opacity-25 blur-[300px] transition-colors duration-1000 md:bottom-[-250px]"
     >
     </div>
 
-    <main class="flex max-h-[95vh] flex-col md:sticky md:top-[25px] md:max-w-[430px] 2xl:mt-[-20px]">
+    <main class="flex max-h-[92vh] flex-col md:sticky md:top-[40px] md:max-w-[430px]">
       <h1 class="font-heading text-6xl font-medium text-[#F0F0F0] 2xl:text-[6.875rem]">
-        Arhella<span class="-mt-2 block font-semibold 2xl:-mt-5">Design</span>
+        Arhella<span class="block font-semibold">Design</span>
       </h1>
-      <p class="mt-5 text-base leading-[155%] 2xl:text-2xl 2xl:leading-[155%]">
+      <p class="mt-5 text-base leading-[155%] 2xl:mt-14 2xl:text-2xl 2xl:leading-[155%]">
         Hi! My name is Artemii. I'm the UX/UI designer with the nickname “Arhella”.
       </p>
       <p class="mt-7 text-base leading-[155%] 2xl:text-2xl 2xl:leading-[155%]">
@@ -33,20 +33,20 @@ let today = new Date().toLocaleDateString('en-us', {
         inspiring. Feel at home.
       </p>
 
-      <ul class="mt-16 flex flex-col gap-4 md:mt-auto 2xl:text-2xl">
+      <ul class="mt-16 flex flex-col gap-4 md:mt-auto 2xl:gap-5 2xl:text-2xl">
         <li class="flex items-center gap-2">
-          <img src="/telegram.svg" alt="" class="h-6 w-6" /><a href="https://t.me/ArtemiiHella" target="_blank"
+          <img src="/telegram.svg" alt="" class="icon h-6 w-6" /><a href="https://t.me/ArtemiiHella" target="_blank"
             >@ArtemiiHella</a
           >
         </li>
         <li class="flex items-center gap-2">
-          <img src="/linkedin.svg" alt="" class="h-6 w-6" /><a
+          <img src="/linkedin.svg" alt="" class="icon h-6 w-6" /><a
             href="https://www.linkedin.com/in/artemii-mamedov/"
             target="_blank">Artemii Mamedov</a
           >
         </li>
         <li class="flex items-center gap-2">
-          <img src="/mail.svg" alt="" class="h-6 w-6" /><a href="mailto:artemii.mamedov@yandex.ru" target="_blank"
+          <img src="/mail.svg" alt="" class="icon h-6 w-6" /><a href="mailto:artemii.mamedov@yandex.ru" target="_blank"
             >artemii.mamedov@yandex.ru</a
           >
         </li>
@@ -54,7 +54,7 @@ let today = new Date().toLocaleDateString('en-us', {
       <hr class="my-6" />
 
       <div class="flex justify-between 2xl:text-2xl">
-        <p class="opacity-20">Last updated</p>
+        <p id="updated-text" class="transition-colors duration-1000">Last updated</p>
         <time datetime={today}>
           {today}
         </time>
@@ -62,7 +62,7 @@ let today = new Date().toLocaleDateString('en-us', {
     </main>
     <div class="relative flex flex-col gap-8 pt-16 md:pt-0 2xl:gap-16">
       <div
-        class="point-light fixed right-0 -z-10 hidden h-[750px] w-[750px] translate-x-1/2 rounded-[374px] bg-[#FF6666] opacity-20 blur-[300px] transition-colors duration-1000 md:top-[-200px] md:block md:opacity-10 2xl:left-[900px]"
+        class="point-light fixed right-0 -z-10 hidden h-[750px] w-[750px] translate-x-1/2 rounded-[374px] bg-[#FF6666] opacity-20 blur-[300px] transition-colors duration-1000 md:top-[-200px] md:block 2xl:left-[900px]"
       >
       </div>
 
@@ -78,5 +78,7 @@ let today = new Date().toLocaleDateString('en-us', {
         ))
       }
     </div>
+
+    <img src="/noise.png" alt="" class="pointer-events-none absolute inset-0" />
   </body>
 </html>

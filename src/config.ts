@@ -1,4 +1,4 @@
-export const SITE_TITLE = 'Arhella';
+export const SITE_TITLE = 'Arhella Design';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 export const PROJECTS_DATA = [
@@ -11,6 +11,7 @@ export const PROJECTS_DATA = [
     color: '#FF6666',
     buttonColor: '#342121',
     buttonTextColor: '#B6B1B1',
+    lastUpdatedColor: '#492828',
   },
   {
     id: 'CircleForms',
@@ -21,6 +22,7 @@ export const PROJECTS_DATA = [
     color: '#FF66AA',
     buttonColor: '#352028',
     buttonTextColor: '#B7B1B4',
+    lastUpdatedColor: '#4B2837',
   },
   {
     id: 'The Potencial',
@@ -31,6 +33,7 @@ export const PROJECTS_DATA = [
     color: '#FFFFFF',
     buttonColor: '#343535',
     buttonTextColor: '#B7B7B7',
+    lastUpdatedColor: '#4C4C4C',
   },
   {
     id: 'ESET NOD32 Antivirus',
@@ -41,6 +44,7 @@ export const PROJECTS_DATA = [
     color: '#0094A1',
     buttonColor: '#142627',
     buttonTextColor: '#AEB3B3',
+    lastUpdatedColor: '#113337',
   },
   {
     id: 'OSIRIS',
@@ -51,6 +55,7 @@ export const PROJECTS_DATA = [
     color: '#E0343F',
     buttonColor: '#2D181A',
     buttonTextColor: '#B5AFAF',
+    lastUpdatedColor: '#441C1E',
   },
   {
     id: 'Readmanga.live',
@@ -61,6 +66,7 @@ export const PROJECTS_DATA = [
     color: '#EDD369',
     buttonColor: '#302D20',
     buttonTextColor: '#B6B5B1',
+    lastUpdatedColor: '#4B2A22',
   },
   {
     id: 'Graphic Design',
@@ -71,5 +77,6 @@ export const PROJECTS_DATA = [
     color: '#FE704B',
     buttonColor: '#301F1A',
     buttonTextColor: '#B7B2B0',
+    lastUpdatedColor: '#4A2921',
   },
 ];
