@@ -11,9 +11,9 @@ const { href, title, text, imageSrc, id } = Astro.props;
 
 <section class="flex flex-col xl:gap-4 2xl:gap-8 2xl:text-2xl">
   <img src={imageSrc} alt="" class="object-contain" />
-  <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between xl:gap-4">
+  <div class="flex flex-col xl:ml-[20px] xl:flex-row xl:items-center xl:justify-between xl:gap-4">
     <div>
-      <h2 class="mt-3 font-heading font-medium text-[#F0F0F0]">{title}</h2>
+      <h2 class="font-heading font-medium text-[#F0F0F0]">{title}</h2>
       <p>{text}</p>
     </div>
     <a
