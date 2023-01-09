@@ -19,5 +19,5 @@ html {
   line-height: 150%;
   background-color: #0a0a0a;
   color: rgba(240, 240, 240, 0.749);
-  letter-spacing: 2%;
+  letter-spacing: 0.05em;
 }
