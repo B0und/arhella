@@ -9,7 +9,7 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
 const { href, title, text, imageSrc, id } = Astro.props;
 ---
 
-<section class="flex flex-col gap-3 xl:gap-4 2xl:gap-8 2xl:text-2xl">
+<section class="flex flex-col gap-3 xl:gap-4 2xl:gap-8 2xl:text-[25.89px]">
   <img src={imageSrc} alt="" class="object-contain" />
   <div class="flex flex-col xl:mx-[20px] xl:flex-row xl:items-center xl:justify-between xl:gap-4">
     <div>
@@ -20,56 +20,15 @@ const { href, title, text, imageSrc, id } = Astro.props;
       id={id}
       target="_blank"
       href={href}
-      class="mt-3 w-fit rounded-[10px] bg-[#321F1F] px-3 py-1 transition-colors duration-1000 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-8 2xl:py-3"
+      class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px]"
+      >learn&nbsp;more</a
+    >
+    <a
+      id={id}
+      target="_blank"
+      href={href}
+      class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px]"
       >view&nbsp;project</a
     >
   </div>
 </section>
-<script>
-  import { PROJECTS_DATA } from '../config';
-
-  // find all lights
-  const lights = document.querySelectorAll<HTMLElement>('.point-light');
-
-  // find all buttons that will change color
-  const colorButtons: HTMLElement[] = [];
-  PROJECTS_DATA.map((project) => {
-    const colorButton = document.getElementById(project.id) as HTMLElement;
-    colorButtons.push(colorButton);
-  });
-
-  const lastUpdated = document.getElementById('updated-text') as HTMLElement;
-
-  let options = {
-    rootMargin: '0px',
-    threshold: 1.0,
-  };
-
-  let observer = new IntersectionObserver((entries) => {
-    const entry = entries[0];
-    const elementId = entries[0].target.id;
-
-    const newPointLightColor = PROJECTS_DATA.filter((project) => project.id === elementId)[0].color;
-    const newButtonColor = PROJECTS_DATA.filter((project) => project.id === elementId)[0].buttonColor;
-    const newTextColor = PROJECTS_DATA.filter((project) => project.id === elementId)[0].buttonTextColor;
-    const newLastUpdatedColor = PROJECTS_DATA.filter((project) => project.id === elementId)[0].lastUpdatedColor;
-
-    if (!entry.isIntersecting) return;
-    for (let light of lights) {
-      light.style.backgroundColor = newPointLightColor;
-    }
-
-    for (let button of colorButtons) {
-      button.style.backgroundColor = newButtonColor;
-      button.style.color = newTextColor!;
-    }
-
-    lastUpdated.style.color = newLastUpdatedColor;
-  }, options);
-
-  // get ids from objects and observe them
-  PROJECTS_DATA.map((project) => {
-    const intersectionElement = document.getElementById(project.id) as HTMLElement;
-    observer.observe(intersectionElement);
-  });
-</script>

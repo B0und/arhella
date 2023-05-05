@@ -3,6 +3,17 @@ export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 export const PROJECTS_DATA = [
   {
+    id: 'CircleForms',
+    href: 'https://circleforms.net',
+    title: 'CircleForms',
+    text: 'An alternative to google forms with osu! API integration',
+    imageSrc: '/circleforms.png',
+    color: '#FF66AA',
+    buttonColor: '#352028',
+    buttonTextColor: '#B7B1B4',
+    lastUpdatedColor: '#4B2837',
+  },
+  {
     id: 'chimu.moe',
     href: 'https://chimu.moe',
     title: 'chimu.moe',
@@ -12,17 +23,6 @@ export const PROJECTS_DATA = [
     buttonColor: '#342121',
     buttonTextColor: '#B6B1B1',
     lastUpdatedColor: '#492828',
-  },
-  {
-    id: 'CircleForms',
-    href: 'https://circleforms.net',
-    title: 'CircleForms',
-    text: 'an alternative to google forms with additional integration with osu! API',
-    imageSrc: '/circleforms.png',
-    color: '#FF66AA',
-    buttonColor: '#352028',
-    buttonTextColor: '#B7B1B4',
-    lastUpdatedColor: '#4B2837',
   },
   {
     id: 'The Potencial',
@@ -78,5 +78,35 @@ export const PROJECTS_DATA = [
     buttonColor: '#301F1A',
     buttonTextColor: '#B7B2B0',
     lastUpdatedColor: '#4A2921',
+  },
+];
+
+export const ALSO_PROJECTS = [
+  {
+    title: 'ART FOR INTROVERT',
+    description: 'Page to purchase a course on understanding movies.',
+    imageSrc: '/kino.png',
+  },
+  {
+    title: 'VOENMEH University',
+    description:
+      'The first page of the website for a state educational institution of higher professional education in Saint Petersburg.',
+    imageSrc: '/voenmeh.png',
+  },
+  {
+    title: 'Real Estate “Paramount”',
+    description:
+      'The homepage of a real estate agency website that deals with selling properties in a cottage settlement.',
+    imageSrc: '/paramount.png',
+  },
+  {
+    title: 'ESET Windows App',
+    description: 'TESET Windows App redesign concept.',
+    imageSrc: '/eset.png',
+  },
+  {
+    title: 'readmanga.live',
+    description: '“last updates” and “manga list” redesign for the largest database of manga in runet.',
+    imageSrc: '/readmanga-new.png',
   },
 ];
