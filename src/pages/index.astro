@@ -74,16 +74,28 @@ let today = new Date().toLocaleDateString('en-us', {
           />
         ))
       }
-      <h2 class="mt-[152px] text-6xl 2xl:text-[6.875rem] font-bold mb-9">Also...</h2>
+      <h2 class="mt-[70px] 2xl:mt-[152px] text-6xl 2xl:text-[6.875rem] font-bold mb-9">Also...</h2>
       <div class="flex flex-col gap-16">
         {
           ALSO_PROJECTS.map((project, i) => (
-            <div class={clsx('flex flex-row justify-between items-center gap-5', i % 2 == 0 && 'flex-row-reverse')}>
-              <div>
+            <div
+              class={clsx(
+                'grid  2xl:grid-cols-2 gap-5 items-center',
+                i % 2 == 0 && '2xl:text-left',
+                i % 2 !== 0 && '2xl:text-right'
+              )}
+            >
+              <img
+                width={580}
+                height={326}
+                src={project.imageSrc}
+                alt=""
+                class={clsx('rounded-[20px] object-contain ', i % 2 == 0 && '2xl:order-last')}
+              />
+              <div class={clsx()}>
                 <h3 class="font-bold 2xl:text-[25.89px]">{project.title}</h3>
                 <p class="2xl:text-[25.89px]">{project.description}</p>
               </div>
-              <img width={580} height={326} src={project.imageSrc} alt="" class="rounded-[20px]" />
             </div>
           ))
         }

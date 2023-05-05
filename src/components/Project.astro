@@ -10,25 +10,27 @@ const { href, title, text, imageSrc, id } = Astro.props;
 ---
 
 <section class="flex flex-col gap-3 xl:gap-4 2xl:gap-8 2xl:text-[25.89px]">
-  <img src={imageSrc} alt="" class="object-contain" />
+  <img src={imageSrc} alt="" class="object-contain rounded-[10px]" />
   <div class="flex flex-col xl:mx-[20px] xl:flex-row xl:items-center xl:justify-between xl:gap-4">
     <div>
-      <h2 class="font-heading font-medium text-[#F0F0F0]">{title}</h2>
-      <p>{text}</p>
+      <h2 class="font-bold text-[#F0F0F0]">{title}</h2>
+      <p class="pb-3">{text}</p>
     </div>
-    <a
-      id={id}
-      target="_blank"
-      href={href}
-      class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px]"
-      >learn&nbsp;more</a
-    >
-    <a
-      id={id}
-      target="_blank"
-      href={href}
-      class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px]"
-      >view&nbsp;project</a
-    >
+    <div class="flex gap-6">
+      <a
+        id={id}
+        target="_blank"
+        href={href}
+        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px]"
+        >learn&nbsp;more</a
+      >
+      <a
+        id={id}
+        target="_blank"
+        href={href}
+        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px]"
+        >view&nbsp;project</a
+      >
+    </div>
   </div>
 </section>
