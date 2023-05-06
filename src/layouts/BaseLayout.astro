@@ -8,7 +8,10 @@ import type { ISourceOptions, SizeMode } from 'tsparticles-engine';
 
 const options: ISourceOptions = {
   autoPlay: true,
-
+  style: {
+    // position: 'absolute',
+    // top: 0,
+  },
   backgroundMask: {
     composite: 'destination-out',
     cover: {
@@ -23,7 +26,7 @@ const options: ISourceOptions = {
   delay: 0,
   fullScreen: {
     enable: true,
-    zIndex: 1,
+    zIndex: -1,
   },
   detectRetina: true,
   duration: 0,
@@ -415,12 +418,9 @@ const options: ISourceOptions = {
   pauseOnOutsideViewport: true,
   responsive: [],
   smooth: false,
-  style: {},
   themes: [],
   zLayers: 100,
 };
-
-changeLanguage('en');
 ---
 
 <script>
@@ -436,6 +436,8 @@ changeLanguage('en');
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <slot />
-  <Particles id="tsparticles" options={options} />
+  <body>
+    <Particles class="tsparticles" id="tsparticles" options={options} />
+    <slot />
+  </body>
 </html>

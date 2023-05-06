@@ -1,11 +1,12 @@
 ---
-import { t } from 'i18next';
+import i18next, { t } from 'i18next';
 import type { PROJECTS_DATA } from '../constants';
 
 type Project = (typeof PROJECTS_DATA)[0];
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes, Project {}
 
 const { link, tkey, imageSrc, id, projectTitle, filename } = Astro.props;
+const lang = i18next.language;
 ---
 
 <section class="flex flex-col gap-3 xl:gap-4 2xl:gap-8 2xl:text-[25.89px]">
@@ -18,15 +19,15 @@ const { link, tkey, imageSrc, id, projectTitle, filename } = Astro.props;
     <div class="flex gap-3 2xl:gap-6">
       <a
         id={projectTitle}
-        href={'./projects/' + filename}
-        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap"
+        href={`/projects/${lang}/` + filename}
+        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150"
         >{t('more')}</a
       >
       <a
         id={projectTitle}
         target="_blank"
         href={link}
-        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap"
+        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] duration-150"
         >{t('view')}</a
       >
     </div>

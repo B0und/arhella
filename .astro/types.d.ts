@@ -112,30 +112,30 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"projects": {
-"chimu.md": {
-  id: "chimu.md",
-  slug: "chimu",
+"en/chimu.md": {
+  id: "en/chimu.md",
+  slug: "en/chimu",
   body: string,
   collection: "projects",
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] },
-"circleforms.md": {
-  id: "circleforms.md",
-  slug: "circleforms",
+"en/circleforms.md": {
+  id: "en/circleforms.md",
+  slug: "en/circleforms",
   body: string,
   collection: "projects",
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] },
-"graphic.md": {
-  id: "graphic.md",
-  slug: "graphic",
+"en/graphic.md": {
+  id: "en/graphic.md",
+  slug: "en/graphic",
   body: string,
   collection: "projects",
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] },
-"potencial.md": {
-  id: "potencial.md",
-  slug: "potencial",
+"en/potencial.md": {
+  id: "en/potencial.md",
+  slug: "en/potencial",
   body: string,
   collection: "projects",
   data: InferEntrySchema<"projects">
