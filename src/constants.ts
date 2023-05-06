@@ -3,61 +3,63 @@ export const SITE_DESCRIPTION = 'Welcome to my website!';
 
 export const PROJECTS_DATA = [
   {
-    id: 'CircleForms',
-    href: 'https://circleforms.net',
-    title: 'CircleForms',
-    text: 'An alternative to google forms with osu! API integration',
+
+    link: 'https://circleforms.net',
+    projectTitle: 'CircleForms',
     imageSrc: '/circleforms.png',
+    tkey: 'circleforms.description',
+    filename: 'circleforms',
   },
   {
-    id: 'chimu.moe',
-    href: 'https://chimu.moe',
-    title: 'chimu.moe',
-    text: 'osu! beatmaps mirror',
+
+    link: 'https://chimu.moe',
+    projectTitle: 'chimu.moe',
     imageSrc: '/chimu.png',
+    tkey: 'chimu.description',
+    filename: 'chimu',
   },
   {
-    id: 'The Potencial',
-    href: 'https://www.google.com/',
-    title: 'The Potencial',
-    text: 'Layouts of CRM systems customized to meet user needs.',
+
+    link: 'https://www.google.com/',
+    projectTitle: 'The Potencial',
     imageSrc: '/potential.png',
+    tkey: 'potencial.description',
+    filename: 'potencial',
   },
   {
-    id: 'Graphic Design',
-    href: 'https://www.google.com/',
-    title: 'Graphic Design',
-    text: 'Commercial (and non-commercial) graphic design work.',
+
+    link: 'https://www.google.com/',
+    projectTitle: 'Graphic Design',
     imageSrc: '/graphicdesign.png',
+    tkey: 'graphic.description',
+    filename: 'graphic',
   },
 ];
 
 export const ALSO_PROJECTS = [
   {
     title: 'ART FOR INTROVERT',
-    description: 'Page to purchase a course on understanding movies.',
     imageSrc: '/kino.png',
+    tkey: 'introvert.description',
   },
   {
     title: 'VOENMEH University',
-    description:
-      'The first page of the website for a state educational institution of higher professional education in Saint Petersburg.',
     imageSrc: '/voenmeh.png',
+    tkey: 'VOENMEH.description',
   },
   {
     title: 'Real Estate “Paramount”',
-    description:
-      'The homepage of a real estate agency website that deals with selling properties in a cottage settlement.',
     imageSrc: '/paramount.png',
+    tkey: 'Paramount.description',
   },
   {
     title: 'ESET Windows App',
-    description: 'TESET Windows App redesign concept.',
     imageSrc: '/eset.png',
+    tkey: 'ESET.description',
   },
   {
     title: 'readmanga.live',
-    description: '“last updates” and “manga list” redesign for the largest database of manga in runet.',
     imageSrc: '/readmanga-new.png',
+    tkey: 'readmangalive.description',
   },
 ];

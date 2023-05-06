@@ -1,0 +1,41 @@
+{
+  "home": {
+    "intro1": "Hi! My name is Artemii, also known as \"Arhella\" on the internet.",
+    "intro2": "I am a UX/UI designer, focused on crafting smooth and convinient user interfaces using various best practices and methodologies."
+  },
+  "also": "Also...",
+  "more": "learn more",
+  "view": "view project",
+  "lastupdated": "Last updated",
+  "back": "back",
+  "live": "live",
+  "indev": "in development",
+  
+  "circleforms": {
+    "description": "An alternative to google forms with osu! API integration"
+  },
+  "chimu": {
+    "description": "osu! beatmaps mirror"
+  },
+  "potencial": {
+    "description": "Layouts of CRM systems customized to meet user needs."
+  },
+  "graphic": {
+    "description": "Commercial and non-commercial graphic design work."
+  },
+  "introvert": {
+    "description": "Page to purchase a course on understanding movies."
+  },
+  "VOENMEH": {
+    "description": "The first page of the website for a state educational institution of higher professional education in Saint Petersburg."
+  },
+  "Paramount": {
+    "description": "The homepage of a real estate agency website that deals with selling properties in a cottage settlement."
+  },
+  "ESET": {
+    "description": "ESET Windows App redesign concept."
+  },
+  "readmangalive": {
+    "description": "“last updates” and “manga list” redesign for the largest database of manga in Russia."
+  }
+}

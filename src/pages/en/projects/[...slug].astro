@@ -1,7 +1,7 @@
 ---
 import { changeLanguage } from "i18next";
 import { CollectionEntry, getCollection } from "astro:content";
-import ProjectPage from "../../layouts/ProjectPage.astro";
+import ProjectPage from "../../../layouts/ProjectPage.astro";
 
 changeLanguage("en");
 
@@ -18,5 +18,9 @@ const { Content } = await post.render();
 ---
 
 <ProjectPage {...post.data}>
-  <Content />
+  <Content  />
 </ProjectPage>
+
+<style>
+
+</style>

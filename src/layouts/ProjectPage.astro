@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
+import BaseLayout from './BaseLayout.astro';
+import { t } from 'i18next';
 
 type Props = CollectionEntry<'projects'>['data'];
 
@@ -9,56 +10,50 @@ const { title, description, images, quote, productionLink } = Astro.props;
 const showImages = (images?.length || 0) > 0;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
-
-  <body>
-    <main>
-      <article class="max-w-[1180px] mx-auto mt-16 mb-20">
-        <div class="px-[130px]">
-          <div class="flex justify-between">
-            <a
-              href="/"
-              class="text-[#F0F0F0] px-9 h-16 border-[#B7B7B7] border-[1px] rounded-[20px] text-[25.89px] flex items-center justify-center"
-              >back</a
-            >
-            {
-              productionLink ? (
-                <a
-                  class="text-[#F0F0F0] px-9 h-16 border-[#B7B7B7] border-[1px] rounded-[20px] text-[25.89px] flex items-center justify-center"
-                  target="_blank"
-                  href={productionLink}
-                >
-                  live
-                </a>
-              ) : (
-                <div class="text-[#C9CB60] bg-[#2F3116] h-16 px-9 rounded-[20px] flex items-center justify-center ">
-                  в разработке
-                </div>
-              )
-            }
-          </div>
-          <h1 class="font-bold leading-[90px] mb-9 mt-16 text-6xl text-[#F0F0F0] 2xl:text-[6.875rem]">
-            {title}
-          </h1>
-          <p class="text-[#B7B6B6] text-[25.89px] leading-normal mb-[61px]">{description}</p>
-          <p class="text-[#8AFFF8] text-[25.89px]">{quote}</p>
-          <div class="content">
-            <slot />
-          </div>
+<BaseLayout>
+  <main class="relative z-10">
+    <article class="max-w-[1180px] mx-auto 2xl:mt-16 mt-8 2xl:mb-20 mb-10">
+      <div class="2xl:px-[130px] px-[30px]">
+        <div class="flex justify-between">
+          <a
+            href="/"
+            class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap"
+            >{t('back')}</a
+          >
+          {
+            productionLink ? (
+              <a
+                class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap"
+                target="_blank"
+                href={productionLink}
+              >
+                {t('live')}
+              </a>
+            ) : (
+              <div class="text-[#C9CB60] bg-[#2F3116] h-16 px-9 rounded-[20px] flex items-center justify-center ">
+                {t('indev')}
+              </div>
+            )
+          }
         </div>
-        {
-          showImages && (
-            <div class="flex flex-col gap-4 mt-16">
-              {images?.map((image) => (
-                <img alt="" src={image} />
-              ))}
-            </div>
-          )
-        }
-      </article>
-    </main>
-  </body>
-</html>
+        <h1 class="font-bold leading-[90px] 2xl:mb-9 2xl:mt-16 mt-8 mb-4 text-6xl text-[#F0F0F0] 2xl:text-[6.875rem]">
+          {title}
+        </h1>
+        <p class="text-[#B7B6B6] text-base 2xl:text-[25.89px] leading-normal mb-[31px] 2xl:mb-[61px]">{description}</p>
+        <p class="text-[#8AFFF8] text-base 2xl:text-[25.89px]">{quote}</p>
+        <div class="content">
+          <slot />
+        </div>
+      </div>
+      {
+        showImages && (
+          <div class="flex flex-col gap-4 mt-16">
+            {images?.map((image) => (
+              <img alt="" src={image} />
+            ))}
+          </div>
+        )
+      }
+    </article>
+  </main>
+</BaseLayout>
