@@ -21,7 +21,7 @@ export const PROJECTS_DATA = [
   {
 
     link: '',
-    projectTitle: 'The Potencial',
+    projectTitle: 'CRM systems',
     imageSrc: '/potential.png',
     tkey: 'potencial.description',
     filename: 'potencial',
