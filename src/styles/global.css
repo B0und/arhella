@@ -35,14 +35,14 @@ h5 {
   font-style: normal;
   font-weight: 700;
   font-size: 25.89px;
-  margin-top: 61px;
-  margin-bottom: 37px;
+  margin-top: 48px;
+  margin-bottom: 16px;
 }
 
 .content p,
 .content ul,
 .content ol {
-  padding-left: 20px;
+  padding-left: 32px;
 }
 .content ul,
 .content ol {

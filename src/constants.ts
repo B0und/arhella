@@ -12,7 +12,7 @@ export const PROJECTS_DATA = [
   },
   {
 
-    link: 'https://chimu.moe',
+    link: '',
     projectTitle: 'chimu.moe',
     imageSrc: '/chimu.png',
     tkey: 'chimu.description',
@@ -20,7 +20,7 @@ export const PROJECTS_DATA = [
   },
   {
 
-    link: 'https://www.google.com/',
+    link: '',
     projectTitle: 'The Potencial',
     imageSrc: '/potential.png',
     tkey: 'potencial.description',
@@ -28,7 +28,7 @@ export const PROJECTS_DATA = [
   },
   {
 
-    link: 'https://www.google.com/',
+    link: '',
     projectTitle: 'Graphic Design',
     imageSrc: '/graphicdesign.png',
     tkey: 'graphic.description',

@@ -9,7 +9,7 @@ const { link, tkey, imageSrc, id, projectTitle, filename } = Astro.props;
 const lang = i18next.language;
 ---
 
-<section class="flex flex-col gap-3 xl:gap-4 2xl:gap-8 2xl:text-[25.89px]">
+<section class="flex flex-col gap-3 xl:gap-4 2xl:gap-6 2xl:text-[25.89px]">
   <img src={imageSrc} alt="" class="object-contain rounded-[10px]" loading="lazy" />
   <div class="flex flex-col xl:mx-[20px] xl:flex-row xl:items-center xl:justify-between xl:gap-4">
     <div>
@@ -23,13 +23,18 @@ const lang = i18next.language;
         class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150"
         >{t('more')}</a
       >
-      <a
-        id={projectTitle}
-        target="_blank"
-        href={link}
-        class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] duration-150"
-        >{t('view')}</a
-      >
+      {
+        link && (
+          <a
+            id={projectTitle}
+            target="_blank"
+            href={link}
+            class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] duration-150"
+          >
+            {t('view')}
+          </a>
+        )
+      }
     </div>
   </div>
 </section>
