@@ -140,6 +140,34 @@ declare module 'astro:content' {
   collection: "projects",
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] },
+"ru/chimu.md": {
+  id: "ru/chimu.md",
+  slug: "ru/chimu",
+  body: string,
+  collection: "projects",
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] },
+"ru/circleforms.md": {
+  id: "ru/circleforms.md",
+  slug: "ru/circleforms",
+  body: string,
+  collection: "projects",
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] },
+"ru/graphic.md": {
+  id: "ru/graphic.md",
+  slug: "ru/graphic",
+  body: string,
+  collection: "projects",
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] },
+"ru/potencial.md": {
+  id: "ru/potencial.md",
+  slug: "ru/potencial",
+  body: string,
+  collection: "projects",
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] },
 },
 
 	};
