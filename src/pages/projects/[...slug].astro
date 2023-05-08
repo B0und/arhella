@@ -3,8 +3,6 @@ import { changeLanguage } from "i18next";
 import { CollectionEntry, getCollection } from "astro:content";
 import ProjectPage from "../../layouts/ProjectPage.astro";
 
-changeLanguage("en");
-
 export async function getStaticPaths() {
     const posts = await getCollection("projects");
     return posts.map((post) => ({
