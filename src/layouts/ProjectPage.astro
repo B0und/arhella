@@ -12,22 +12,24 @@ const showImages = (images?.length || 0) > 0;
 const showDevLink = productionLink === 'dev';
 const showEmpty = productionLink === 'none';
 const showLiveLink = productionLink && !showEmpty && !showDevLink;
+
+const backText = t('back');
 ---
 
 <BaseLayout>
   <main class="relative z-10">
     <article class="max-w-[1180px] mx-auto 2xl:mt-16 mt-8 2xl:mb-20 mb-10">
-      <div class="2xl:px-[130px] px-[30px]">
+      <div class="2xl:px-[130px] px-[35px]">
         <div class="flex justify-between">
           <a
             href="/"
-            class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150"
-            >{t('back')}</a
+            class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150 h-8 text-[#F0F0F0B2]"
+            >{backText}</a
           >
           {
             showLiveLink && (
               <a
-                class="text-[#F0F0F0] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150"
+                class="text-[#F0F0F0B2] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150 h-8"
                 target="_blank"
                 href={productionLink}
               >
@@ -37,18 +39,20 @@ const showLiveLink = productionLink && !showEmpty && !showDevLink;
           }
           {
             showDevLink && (
-              <div class="text-[#C9CB60] bg-[#2F3116] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap ">
+              <div class="text-[#C9CB60] bg-[#2F3116] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap h-8">
                 {t('indev')}
               </div>
             )
           }
           {showEmpty && <div />}
         </div>
-        <h1 class="font-bold 2xl:mb-9 2xl:mt-14 ml-5 mt-8 mb-4 text-6xl text-[#F0F0F0] 2xl:text-[6.875rem]">
+        <h1 class="text-base leading-[25px] font-bold text-[#F0F0F0] 2xl:text-[6.875rem] mt-8 2xl:leading-[148px] 2xl:ml-5">
           {title}
         </h1>
-        <p class="text-[#B7B6B6] text-base 2xl:text-[25.89px] leading-normal mb-[31px] 2xl:mb-[50px] -mt-7 ml-4">{description}</p>
-        <p class="text-[#8AFFF8] text-base 2xl:text-[25.89px] ml-4 ">{quote}</p>
+        <p class="text-[#B7B6B6] text-base 2xl:text-[25.89px] leading-normal 2xl:-mt-1 2xl:ml-5">
+          {description}
+        </p>
+        <p class="text-[#8AFFF8] text-base 2xl:text-[25.89px] mt-6 2xl:mt-11 2xl:ml-5">{quote}</p>
         <div class="content">
           <slot />
         </div>

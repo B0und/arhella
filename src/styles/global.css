@@ -9,7 +9,9 @@ html body {
   font-weight: 400;
   background-color: #0a0a0a;
   color: #b7b6b6;
+  letter-spacing: 0.02em;
 }
+
 body > :first-child {
   display: none;
 }
@@ -20,30 +22,51 @@ h3,
 h4,
 h5 {
   color: #f0f0f0;
-  font-family: 'Satoshi';
+  font-family: 'Satoshi', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 25.89px;
 }
+
 .content h1,
 .content h2,
 .content h3,
 .content h4,
 .content h5 {
   color: #f0f0f0;
-  font-family: 'Satoshi';
+  font-family: 'Satoshi', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 25.89px;
-  margin-top: 48px;
-  margin-bottom: 16px;
+  font-size: 1rem;
+  margin-top: 22px;
+  margin-bottom: 0px;
 }
 
-.content p,
-.content ul,
-.content ol {
-  padding-left: 32px;
+@media (min-width: 1536px) {
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5 {
+    color: #f0f0f0;
+    font-family: 'Satoshi', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.89px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
 }
+
+@media (min-width: 1536px) {
+  .content p,
+  .content ul,
+  .content ol {
+    padding-left: 32px;
+    font-size: 1rem;
+  }
+}
+
 .content ul,
 .content ol {
   list-style: disc;
