@@ -1,23 +1,87 @@
-@font-face {
-  font-family: 'ClashDisplay-Variable';
-  src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2'),
-    url('/fonts/ClashDisplay-Variable.woff') format('woff'), url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
-  font-weight: 200 700;
-  font-display: swap;
-  font-style: normal;
-}
-
 ::selection {
-  color: #451a1a;
-  background: #ff6666;
+  color: #1a4345;
+  background: #8afff8;
 }
 
-html {
-  font-family: 'Satoshi';
+html body {
+  font-family: 'Tahoma';
   font-style: normal;
   font-weight: 400;
-  line-height: 150%;
   background-color: #0a0a0a;
-  color: rgba(240, 240, 240, 0.749);
-  letter-spacing: 0.05em;
+  color: #b7b6b6;
+
+}
+
+body > :first-child {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #f0f0f0;
+  font-family: 'Satoshi', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25.89px;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+  color: #f0f0f0;
+  font-family: 'Satoshi', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 22px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1536px) {
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5 {
+    color: #f0f0f0;
+    font-family: 'Satoshi', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.89px;
+    margin-top: 48px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .content p,
+  .content ul,
+  .content ol {
+    padding-left: 32px;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.content ul,
+.content ol {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.underline-under {
+  text-underline-position: under;
+}
+
+@media (min-width: 1536px) {
+  .content p,
+  .content ul,
+  .content ol {
+    font-size: 25.89px;
+  }
 }
