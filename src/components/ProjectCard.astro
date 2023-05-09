@@ -15,14 +15,14 @@ const projectLinkStart = lang === "en" ? "/" : "/ru/"
   <img src={imageSrc} alt="" class="object-contain rounded-[10px]" loading="lazy" />
   <div class="flex flex-col xl:mx-[20px] xl:flex-row xl:items-center xl:justify-between xl:gap-4">
     <div>
-      <h2 class="font-bold text-[#F0F0F0B2]">{projectTitle}</h2>
-      <p class="pb-3">{t(tkey)}</p>
+      <h2 class="font-bold text-[#F0F0F0] tracking-[0.015em]">{projectTitle}</h2>
+      <p class="pb-3 tracking-[0.02em]">{t(tkey)}</p>
     </div>
     <div class="flex gap-3 2xl:gap-6">
       <a
         id={projectTitle}
         href={`${projectLinkStart}projects/${lang}/` + filename}
-        class="text-[#F0F0F0B2] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150"
+        class="text-[#F0F0F0B2] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150 tracking-[0.02em]"
         >{t('more')}</a
       >
       {
@@ -31,7 +31,7 @@ const projectLinkStart = lang === "en" ? "/" : "/ru/"
             id={projectTitle}
             target="_blank"
             href={link}
-            class="text-[#F0F0F0B2] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] duration-150"
+            class="text-[#F0F0F0B2] border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] duration-150 tracking-[0.02em]"
           >
             {t('view')}
           </a>

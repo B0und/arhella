@@ -1,16 +1,17 @@
 ---
-import { PROJECTS_DATA, ALSO_PROJECTS } from "../constants";
-import Project from "../components/ProjectCard.astro";
-import clsx from "clsx";
-import i18next, { t, changeLanguage } from "i18next";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import { PROJECTS_DATA, ALSO_PROJECTS } from '../constants';
+import Project from '../components/ProjectCard.astro';
+import clsx from 'clsx';
+import i18next, { t, changeLanguage } from 'i18next';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Trans } from 'astro-i18next/components';
 
-changeLanguage("en");
+changeLanguage('en');
 
-let today = new Date().toLocaleDateString("en-us", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
+let today = new Date().toLocaleDateString('en-us', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
 });
 ---
 
@@ -18,13 +19,19 @@ let today = new Date().toLocaleDateString("en-us", {
   <main class="flex flex-col px-9 py-6 md:flex-row md:gap-28 2xl:gap-[170px] 2xl:px-16 2xl:py-10 relative z-10">
     <div class="flex max-h-[92vh] flex-col md:sticky md:top-[40px] md:max-w-[430px]">
       <h1 class="font-heading text-6xl font-bold text-[#F0F0F0] 2xl:text-[6.875rem]">
-        Arhella<span class="block font-bold">Design</span>
+        Arhella<span class="block font-bold tracking-[0.015em] ml-[-5px]">Design</span>
       </h1>
-      <p class="mt-5 text-base leading-[155%] 2xl:mt-[61px] 2xl:text-[25.89px] 2xl:leading-[155%]">
-        {t('home.intro1')}
+      <p class="mt-5 text-base leading-[155%] 2xl:mt-[61px] 2xl:text-[25.89px] 2xl:leading-[155%] max-w-[356px]">
+        <Trans i18nKey="home.intro1">
+          Hi! My name is Artemii, also known as "<span class="text-[#8AFFF8]">Arhella</span>" on the internet.
+        </Trans>
       </p>
-      <p class="mt-[45px] text-base leading-[155%] 2xl:text-[25.89px] 2xl:leading-[155%]">
-        {t('home.intro2')}
+      <!--  -->
+      <p class="mt-[45px] text-base leading-[155%] 2xl:text-[25.89px] 2xl:leading-[155%] max-w-[356px]">
+        <Trans i18nKey="home.intro2">
+          I'm a <span class="text-[#8AFFF8]">UX/UI Designer</span>, intent on crafting convenient and clean user
+          interfaces using various best practices and methodologies.
+        </Trans>
       </p>
 
       <ul class="mt-16 flex flex-col gap-4 md:mt-auto 2xl:gap-5 2xl:text-[25.89px]">
@@ -54,8 +61,8 @@ let today = new Date().toLocaleDateString("en-us", {
       <hr class="my-9" />
 
       <div class="flex justify-between 2xl:text-[25.89px]">
-        <p id="updated-text" class="transition-colors duration-1000">{t('lastupdated')}</p>
-        <time datetime={today}>
+        <p id="updated-text" class="transition-colors duration-1000 tracking-[0.02em]">{t('lastupdated')}</p>
+        <time class="tracking-[0.02em]" datetime={today}>
           {today}
         </time>
       </div>

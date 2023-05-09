@@ -9,7 +9,7 @@ html body {
   font-weight: 400;
   background-color: #0a0a0a;
   color: #b7b6b6;
-  letter-spacing: 0.02em;
+
 }
 
 body > :first-child {
@@ -64,6 +64,7 @@ h5 {
   .content ol {
     padding-left: 32px;
     font-size: 1rem;
+    letter-spacing: 0.02em;
   }
 }
 

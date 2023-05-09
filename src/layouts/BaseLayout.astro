@@ -2,16 +2,13 @@
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../constants';
 
-import i18next, { t, changeLanguage } from 'i18next';
+import i18next from 'i18next';
 import Particles from 'astro-particles';
 import type { ISourceOptions, SizeMode } from 'tsparticles-engine';
+import { HeadHrefLangs } from 'astro-i18next/components';
 
 const options: ISourceOptions = {
   autoPlay: true,
-  style: {
-    // position: 'absolute',
-    // top: 0,
-  },
   backgroundMask: {
     composite: 'destination-out',
     cover: {
@@ -557,6 +554,7 @@ const options: ISourceOptions = {
 <html lang={i18next.language}>
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <HeadHrefLangs />
   </head>
   <body>
     <Particles class="tsparticles" id="tsparticles" options={options} />
