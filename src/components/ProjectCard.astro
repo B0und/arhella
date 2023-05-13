@@ -8,7 +8,7 @@ export interface Props extends astroHTML.JSX.AnchorHTMLAttributes, Project {}
 const { link, tkey, imageSrc, id, projectTitle, filename } = Astro.props;
 const lang = i18next.language;
 
-const projectLinkStart = lang === "en" ? "/" : "/ru/"
+const projectLinkStart = lang === 'en' ? '/' : '/ru/';
 ---
 
 <section class="flex flex-col gap-3 xl:gap-4 2xl:gap-6 2xl:text-[25.89px]">
@@ -18,7 +18,7 @@ const projectLinkStart = lang === "en" ? "/" : "/ru/"
       <h2 class="font-bold text-[#F0F0F0] tracking-[0.015em]">{projectTitle}</h2>
       <p class="pb-3 tracking-[0.02em]">{t(tkey)}</p>
     </div>
-    <div class="flex gap-3 2xl:gap-6">
+    <div class="flex gap-3 2xl:gap-6 flex-wrap">
       <a
         id={projectTitle}
         href={`${projectLinkStart}projects/${lang}/` + filename}

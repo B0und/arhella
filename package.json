@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm i18n:generate && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "i18n:generate": "astro-i18next generate"
