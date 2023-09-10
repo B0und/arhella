@@ -1,5 +1,5 @@
 ---
-title: 'Граф. дизайн'
+title: 'Graphic Design'
 description: 'Коммерческие (и некоммерческие) работы по графическому дизайну.'
 quote: '“Типографика, цвета и композиция важны.”'
 images: ['/graphicdesign.png', '/gd2.png', '/gd3.png', '/gd4.png', '/gd5.png']

@@ -15,6 +15,26 @@ let today = new Date().toLocaleDateString('en-us', {
 });
 ---
 
+<!-- <script is:inline>
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('LOAD');
+  const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+  if (savedScrollPosition) {
+    console.log('scrol to :', Number(savedScrollPosition));
+    window.scrollTo(0, Number(savedScrollPosition));
+  }
+});
+
+document.addEventListener('click', (e) => {
+  console.log(e);
+  // @ts-ignore
+  if (e?.target?.nodeName === 'A') {
+    console.log('SET LOCAL STORAAGE', String(window.scrollY));
+    // Adjust this selector based on your use-case
+    sessionStorage.setItem('scrollPosition', String(window.scrollY));
+  }
+});
+</script> -->
 <BaseLayout>
   <main class="flex flex-col px-9 py-6 md:flex-row md:gap-28 2xl:gap-[170px] 2xl:px-16 2xl:py-10 relative z-10">
     <div class="flex max-h-[92vh] flex-col md:sticky md:top-[40px] md:max-w-[430px]">

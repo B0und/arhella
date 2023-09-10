@@ -14,8 +14,6 @@ const showEmpty = productionLink === 'none';
 const showLiveLink = productionLink && !showEmpty && !showDevLink;
 
 const backText = t('back');
-
-const backLink = i18next.language === 'en' ? '/' : '/ru/';
 ---
 
 <BaseLayout>
@@ -24,7 +22,9 @@ const backLink = i18next.language === 'en' ? '/' : '/ru/';
       <div class="2xl:px-[130px] px-[35px]">
         <div class="flex justify-between">
           <a
-            href={backLink}
+            onclick="
+            history.back()
+            "
             class="border-[#B7B7B7] border-[1px] 2xl:text-[25.89px] flex items-center justify-center w-fit rounded-[10px] px-3 py-1 md:rounded-[15px] 2xl:rounded-[20px] 2xl:px-9 2xl:h-[64px] whitespace-nowrap hover:bg-[#8AFFF8] hover:text-[#1A4345] transition-colors duration-150 h-8 text-[#F0F0F0B2]"
             >{backText}</a
           >
@@ -50,6 +50,7 @@ const backLink = i18next.language === 'en' ? '/' : '/ru/';
         </div>
         <h1
           class="text-base leading-[25px] font-bold text-[#F0F0F0] 2xl:text-[6.875rem] mt-8 2xl:leading-[148px] 2xl:ml-5"
+          transition:name={title}
         >
           {title}
         </h1>

@@ -1,5 +1,5 @@
 ---
-title: 'CRM systems'
+title: 'CRM'
 description: 'Layouts of CRM systems customized to meet user needs.'
 quote: '“Increased the efficiency of the company`s operations.”'
 images: ['/crm1.png', '/crm2.png', '/crm3.png']

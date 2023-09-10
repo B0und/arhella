@@ -1,18 +1,18 @@
 ---
-import { changeLanguage } from "i18next";
-import { CollectionEntry, getCollection } from "astro:content";
-import ProjectPage from "../../layouts/ProjectPage.astro";
+import { changeLanguage } from 'i18next';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import ProjectPage from '../../layouts/ProjectPage.astro';
 
-changeLanguage("en");
+changeLanguage('en');
 
 export async function getStaticPaths() {
-    const posts = await getCollection("projects");
-    return posts.map((post) => ({
-        params: { slug: post.slug },
-        props: post,
-    }));
+  const posts = await getCollection('projects');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
 }
-type Props = CollectionEntry<"projects">;
+type Props = CollectionEntry<'projects'>;
 const post = Astro.props;
 const { Content } = await post.render();
 ---
